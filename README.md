@@ -2,7 +2,7 @@
 
 > Quickly bootstrap a new project with Vite React Express Boilerplate.
 
-This boilerplate is a fork of [lmachens/vite-boilerplate](https://github.com/lmachens/vite-boilerplate), but replaces TypeScript with JavaScript and removes Storybook.
+This boilerplate is a fork of [joeynguyen/vite-react-express-boilerplate](https://github.com/joeynguyen/vite-react-express-boilerplate), but removes husky, stylelint and slightly modified the source code.
 
 This boilerplate contains all the tools you need to build a modern web app with JavaScript, React, Vite, and Express.
 You can use it to quickly bootstrap your project.
