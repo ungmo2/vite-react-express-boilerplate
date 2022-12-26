@@ -4,10 +4,10 @@
 
 This boilerplate is a fork of [lmachens/vite-boilerplate](https://github.com/lmachens/vite-boilerplate), but replaces TypeScript with JavaScript and removes Storybook.
 
-This boilerplate contains all the tools you need to build a modern web app with JavaScript, React, Vite, and Express.  
+This boilerplate contains all the tools you need to build a modern web app with JavaScript, React, Vite, and Express.
 You can use it to quickly bootstrap your project.
 
-ESLint, stylelint, prettier, husky and lintstaged are configured to give you a solid development experience.
+ESLint, prettier are configured to give you a solid development experience.
 
 ## Installing / Developing
 
@@ -29,8 +29,8 @@ Boom! These scripts run your server and client in development mode.
 
 The default PORTS are:
 
-- `3001` for the server
-- `3000` for the client
+- `9000` for the server
+- `5173` for the client
 
 If you don't like to call all scripts at once, you can also run:
 
@@ -61,12 +61,8 @@ npm start
 
 In production, you have a single server serving everything.
 
-`/api/*` is the API endpoint.  
+`/api/*` is the API endpoint.
 `/*` is the client.
-
-## Tests
-
-A test runner is not installed (right now). But ESLint and Prettier are checked on commit and pushed thanks to husky and lintstaged.
 
 ## Licensing
 

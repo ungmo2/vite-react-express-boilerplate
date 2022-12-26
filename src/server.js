@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-const router = require('./lib/router');
+const api = require('./router/api');
 
 const { PORT = 3001 } = process.env;
 
@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 
 // Serve API requests from the router
-app.use('/api', router);
+app.use('/api', api);
 
 // Serve app production bundle
 app.use(express.static('dist/app'));
