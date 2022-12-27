@@ -43,7 +43,7 @@ You can configure the server port by setting the `PORT` environment variable. Cr
 
 | KEY  | VALUE                                                         |
 | ---- | ------------------------------------------------------------- |
-| PORT | (Optional) Port for the server environment (defaults to 3001) |
+| PORT | (Optional) Port for the server environment (defaults to 9000) |
 
 ## Building
 

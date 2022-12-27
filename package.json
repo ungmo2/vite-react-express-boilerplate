@@ -4,8 +4,8 @@
   "scripts": {
     "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
     "client:dev": "vite",
-    "server:dev": "nodemon src/server.js",
-    "server:build": "babel --verbose --out-dir dist --only 'src/server.js,src/lib/' src",
+    "server:dev": "nodemon src/server/app.js",
+    "server:build": "babel --verbose --out-dir dist --only 'src/server/' src",
     "client:build": "vite build",
     "build": "npm run server:build && npm run client:build",
     "serve": "vite preview",
@@ -15,8 +15,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.6.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
@@ -32,7 +31,6 @@
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
     "nodemon": "^2.0.13",
-    "prettier": "2.4.1",
     "prop-types": "^15.7.2",
     "vite": "^4.0.3",
     "@babel/cli": "^7.20.7",
