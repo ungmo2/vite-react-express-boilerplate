@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 
 dotenv.config();
 
-const { PORT = 3001 } = process.env;
+const { PORT = 9000 } = process.env;
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,6 +19,17 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'dist/app',
+    outDir: 'dist/frontend',
+    rollupOptions: {
+      output: {
+        assetFileNames: assetInfo => {
+          let extType = assetInfo.name.split('.').at(1);
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) extType = 'img';
+          return `${extType}/[name]-[hash][extname]`;
+        },
+        chunkFileNames: 'js/[name]-[hash].js',
+        entryFileNames: 'js/[name]-[hash].js',
+      },
+    },
   },
 });

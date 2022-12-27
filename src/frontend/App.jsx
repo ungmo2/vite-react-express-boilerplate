@@ -1,11 +1,16 @@
 import React from 'react';
+import axios from 'axios';
+
 import reactLogo from './assets/react.svg';
 import viteLogo from './assets/vite.svg';
 import './App.css';
-// import Welcome from './components/Welcome/Welcome';
 
 const App = () => {
   const [count, setCount] = React.useState(0);
+
+  React.useEffect(() => {
+    axios.get('/api/todos').then(({ data: todos }) => console.log(todos));
+  }, []);
 
   return (
     <div className="App">

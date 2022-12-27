@@ -13,11 +13,11 @@ app.use(express.json());
 app.use('/api', api);
 
 // Serve app production bundle
-app.use(express.static('dist/app'));
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Handle client routing, return all requests to the app
 app.get('*', (_req, res) => {
-  res.sendFile(path.join(__dirname, 'app/index.html'));
+  res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
 app.listen(PORT, () => {
